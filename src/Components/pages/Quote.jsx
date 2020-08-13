@@ -220,10 +220,10 @@ class Quote extends React.Component {
         }
 
         const buttondiv = {
-             margin: '50px auto',
-             width: '40%',
-             textAlign: 'center',
-              // For mobile
+            margin: '50px auto',
+            width: '40%',
+            textAlign: 'center',
+            // For mobile
             '@media (max-width: 992px)': {
                 width: '100%'
             }
@@ -244,9 +244,9 @@ class Quote extends React.Component {
 
                         {/*SELECTED POOLTABLE OR PIANO AS EXTRA FOR HOUSE MOVE*/}
                         {parseInt(this.state.selectedOptions.extras) === 1 && this.state.selectedOptions.serviceType === 0 ?
-                            <div>Pool table: {this.state.poolOptionsEnglish[this.state.selectedOptions.selectedPool]}</div> :
+                            <div>{this.state.poolOptionsEnglish[this.state.selectedOptions.selectedPool]}</div> :
                             parseInt(this.state.selectedOptions.extras) === 2 && this.state.selectedOptions.serviceType === 0 ?
-                                <div>Piano: {this.state.pianoOptionsEnglish[this.state.selectedOptions.selectedPiano]}</div> : ''}
+                                <div>{this.state.pianoOptionsEnglish[this.state.selectedOptions.selectedPiano]}</div> : ''}
 
                         {/*SELECTED POOLTABLE OR PIANO AS A SERVICE*/}
                         {parseInt(this.state.selectedOptions.extras) === 3 && this.state.selectedOptions.serviceType === 3 ?
@@ -267,6 +267,12 @@ class Quote extends React.Component {
                                 <div>${this.state.totalCost} includes the first {this.state.clientHours} hours</div>
                                 <div>${this.state.costPerQuarterHour} per 15 min (after 1st {this.state.clientHours} hour)</div>
                             </>}
+
+                        {/*SELECTED POOLTABLE OR PIANO AS EXTRA FOR HOUSE MOVE*/}
+                        {parseInt(this.state.selectedOptions.extras) === 1 && this.state.selectedOptions.serviceType === 0 ?
+                            <div>(no additional charges)</div> :
+                            parseInt(this.state.selectedOptions.extras) === 2 && this.state.selectedOptions.serviceType === 0 ?
+                                <div>(no additional charges)</div> : ''}
                     </div>
 
                     {/*THIRD COLUMN*/}
@@ -277,7 +283,7 @@ class Quote extends React.Component {
                         {this.state.selectedOptions.extras === 1 ? <p>POOL TABLE</p> :
                             this.state.selectedOptions.extras === 2 ? <p>PIANO</p> : <></>}
 
-                                   {/*SELECTED POOLTABLE OR PIANO AS EXTRA FOR HOUSE MOVE*/}
+                        {/*SELECTED POOLTABLE OR PIANO AS EXTRA FOR HOUSE MOVE*/}
                         {parseInt(this.state.selectedOptions.extras) === 1 && this.state.selectedOptions.serviceType === 0 ?
                             <div>POOL TABLE</div> :
                             parseInt(this.state.selectedOptions.extras) === 2 && this.state.selectedOptions.serviceType === 0 ?
@@ -324,11 +330,11 @@ class Quote extends React.Component {
                             <li >You are fully insured.</li>
                             <li >No out of pocket or excess payable.</li>
                             {this.state.selectedOptions.serviceType === 1 ? <></> : <>
-                            <li >All trucks are fitted with a hydraulic lift.</li>
-                            {this.state.selectedOptions.serviceType === 2 || this.state.selectedOptions.serviceType === 3 ? <></> : <><li >Unlimited FREE boxes available.</li></>}</>}
+                                <li >All trucks are fitted with a hydraulic lift.</li>
+                                {this.state.selectedOptions.serviceType === 2 || this.state.selectedOptions.serviceType === 3 ? <></> : <><li >Unlimited FREE boxes available.</li></>}</>}
                             {this.state.selectedOptions.serviceType === 2 || this.state.selectedOptions.serviceType === 3 ? <></> : <>
-                            <li >2-men included as standard.</li>
-                            <li >We don't round up to the nearest hour or half hour.</li></>}
+                                <li >2-men included as standard.</li>
+                                <li >We don't round up to the nearest hour or half hour.</li></>}
                             <li >A decade of trust and experience.</li>
                         </ul>
                     </div>
