@@ -1,0 +1,70 @@
+*{
+
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+
+
+    /*font-family: 'calvert MT';*/
+    box-sizing: border-box;
+
+
+  @keyframes fadeInOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  font-family: "Lato" ,sans-serif;
+}
+
+.input{
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 10px;
+  background: white;
+  border: 3px solid black;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.datepick {
+  width: 100%;
+}
+
+
+li {
+  list-style-type: none;
+  padding: 5px
+  }
+
+
+ .table-ul li:before
+ {content:'\2713';
+   display:inline-block;
+   color:green;
+   padding:0 9px 0 0;
+   font-weight: 700;
+   }
+
+
+ ul li{list-style-type:none;font-size:1em;}
+      ul {
+        list-style: none outside;
+        margin-left: 7px;
+        }
