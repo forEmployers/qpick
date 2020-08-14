@@ -243,7 +243,7 @@ class Quote extends React.Component {
                         {this.state.selectedOptions.serviceType === 0 || this.state.selectedOptions.serviceType === 1 ? <div>{this.state.labourers} men</div> : <></>}
 
                         {/*SELECTED POOLTABLE OR PIANO AS EXTRA FOR HOUSE MOVE*/}
-                        {parseInt(this.state.selectedOptions.extras) === 1 && this.state.selectedOptions.serviceType === 0 ?
+                        {parseInt(this.state.selectedOptions.extras) === 3 && this.state.selectedOptions.serviceType === 0 ?
                             <div>{this.state.poolOptionsEnglish[this.state.selectedOptions.selectedPool]}</div> :
                             parseInt(this.state.selectedOptions.extras) === 2 && this.state.selectedOptions.serviceType === 0 ?
                                 <div>{this.state.pianoOptionsEnglish[this.state.selectedOptions.selectedPiano]}</div> : ''}
@@ -269,7 +269,7 @@ class Quote extends React.Component {
                             </>}
 
                         {/*SELECTED POOLTABLE OR PIANO AS EXTRA FOR HOUSE MOVE*/}
-                        {parseInt(this.state.selectedOptions.extras) === 1 && this.state.selectedOptions.serviceType === 0 ?
+                        {parseInt(this.state.selectedOptions.extras) === 3 && this.state.selectedOptions.serviceType === 0 ?
                             <div>(no additional charges)</div> :
                             parseInt(this.state.selectedOptions.extras) === 2 && this.state.selectedOptions.serviceType === 0 ?
                                 <div>(no additional charges)</div> : ''}
@@ -279,15 +279,9 @@ class Quote extends React.Component {
                     <div style={cell}>
                         <div>GST</div>
                         <div>INSURANCE</div>
-                        {/*SELECTED POOLTABLE OR PIANO AS EXTRA*/}
-                        {this.state.selectedOptions.extras === 1 ? <p>POOL TABLE</p> :
+                        {/*SELECTED POOLTABLE OR PIANO*/}
+                        {this.state.selectedOptions.extras === 3 ? <p>POOL TABLE</p> :
                             this.state.selectedOptions.extras === 2 ? <p>PIANO</p> : <></>}
-
-                        {/*SELECTED POOLTABLE OR PIANO AS EXTRA FOR HOUSE MOVE*/}
-                        {parseInt(this.state.selectedOptions.extras) === 1 && this.state.selectedOptions.serviceType === 0 ?
-                            <div>POOL TABLE</div> :
-                            parseInt(this.state.selectedOptions.extras) === 2 && this.state.selectedOptions.serviceType === 0 ?
-                                <div>PIANO</div> : ''}
                     </div>
 
                 </div>

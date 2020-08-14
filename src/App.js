@@ -54,7 +54,7 @@ class App extends React.Component {
 
       // Date & extras
       extrasTime: new Date(),
-      extrasOptions: ['No extras', 'Pool table', 'Piano'],
+      extrasOptions: ['No extras', 'Piano', 'Pool table'],
       selectedExtra: false,
       pianoOptions: ['Upright Piano', 'Pianola', 'Organ', 'Baby Grand Piano', 'Grand Piano'],
       poolOptions: ["7’ x 3’6", "8’ x 4’", "9’ x 4’6"],
@@ -487,7 +487,7 @@ class App extends React.Component {
   render() {
 
     const container = {
-      width: '70%',
+      width: '100%',
       margin: '100px auto',
       minWidth: '800px',
       borderRadius: '5px',

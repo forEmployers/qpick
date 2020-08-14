@@ -49,9 +49,9 @@ class Extras extends React.Component {
     selectedOption = (option) => {
 
         this.setState({
-            selectedExtra: parseInt(option)
+            selectedExtra: parseInt(option)+1
         })
-        this.props.selectedOption(option)
+        this.props.selectedOption( parseInt(option)+1)
         this.props.selectedPiano(0)
         this.props.selectedPool(0)
     }
@@ -167,7 +167,7 @@ class Extras extends React.Component {
                                 width="100%"
                             />
                         </div>
-                        {(this.state.selectedExtra === 1 || this.props.selectedMoveType === 3) ? <div style={dropdownRow}>
+                        {(this.state.selectedExtra === 3 || this.props.selectedMoveType === 3) ? <div style={dropdownRow}>
                             <Dropdown
                                 options={this.props.poolOptions}
                                 selected={this.selectedPool}
