@@ -49,9 +49,9 @@ class Extras extends React.Component {
     selectedOption = (option) => {
 
         this.setState({
-            selectedExtra: parseInt(option)+1
+            selectedExtra: parseInt(option) + 1
         })
-        this.props.selectedOption( parseInt(option)+1)
+        this.props.selectedOption(parseInt(option) + 1)
         this.props.selectedPiano(0)
         this.props.selectedPool(0)
     }
@@ -152,7 +152,7 @@ class Extras extends React.Component {
                         calendarClosed: false
 
                     })
-                }} style={link}>Open calendar</div> <div></div></>: <></>}
+                }} style={link}>Open calendar</div> <div></div></> : <></>}
 
                 <div></div>
                 {this.props.selectedMoveType !== 1 && parseInt(this.props.selectedSize) !== 0 ? <>

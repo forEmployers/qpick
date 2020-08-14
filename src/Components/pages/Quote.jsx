@@ -47,10 +47,11 @@ class Quote extends React.Component {
                 "deliveryPlaceId": this.state.selectedOptions.dropoffPlaceId,
                 "deliveryAccess": accessOptions[this.state.selectedOptions.dropoffAccess],
                 "serviceDate": this.state.selectedOptions.serviceDate,
-                items: this.state.selectedOptions.extras ? {
-                    "poolTable": { "size": this.state.poolOptions[this.state.selectedOptions.selectedPool] },
-                    "piano": { "type": this.state.pianoOptions[this.state.selectedOptions.selectedpiano] }
-                } : {}
+                "items":
+                    parseInt(this.state.selectedOptions.extras) === 3 ?
+                        { "poolTable": { "size": this.state.poolOptions[this.state.selectedOptions.selectedPool] }, } :
+                        parseInt(this.state.selectedOptions.extras) === 2 ?
+                            { "piano": { "type": this.state.pianoOptions[this.state.selectedOptions.selectedPiano] }, } : <></>
             }
 
         )
