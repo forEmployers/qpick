@@ -495,6 +495,7 @@ class App extends React.Component {
       transition: ".2s transform linear, .2s box-shadow linear",
       boxSizing: 'border-box',
       overflow: 'auto',
+      backgroundColor: 'white',
 
       // For mobile
       '@media (max-width: 992px)': {

@@ -1,5 +1,5 @@
 {
-  "homepage": "work/f/QuickPick/",
+  "homepage": "./wp-content/plugins/quickpick/",
   "name": "app",
   "version": "0.1.0",
   "private": true,
