@@ -1,14 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
 
-import few from '../../img/few-items.png'
-import single from '../../img/single-item.png'
-import onebed from '../../img/one-bedroom.png'
-import twobed from '../../img/two-bedroom.png'
-import threebed from '../../img/three-bedroom.png'
-import fourbed from '../../img/four-bedroom.png'
-
-
 class Size extends React.Component {
     constructor(props) {
         super(props)
@@ -100,7 +92,7 @@ class Size extends React.Component {
         return <>
             <div style={content}>
 
-                <div style={cell}><img id="0" onClick={this.select} alt="house" key="0"
+                <div style={cell}><img id="0" onClick={this.select} alt="single" key="0"
                     style={{
                         height: '110px',
                         cursor: 'pointer',
@@ -109,9 +101,9 @@ class Size extends React.Component {
                             transform: 'scale(1.1)'
                         }
 
-                    }} src={single} />   <div style={picLabelMobile}>Single item</div></div>
+                    }} src={'./img/singleitem.png'} />   <div style={picLabelMobile}>Single item</div></div>
 
-                <div style={cell}><img id="1" onClick={this.select} alt="piano" key="1"
+                <div style={cell}><img id="1" onClick={this.select} alt="few" key="1"
                     style={{
                         height: '110px',
                         cursor: 'pointer',
@@ -119,9 +111,9 @@ class Size extends React.Component {
                         ':hover': {
                             transform: 'scale(1.1)'
                         }
-                    }} src={few} /> <div style={picLabelMobile}>Few items</div></div>
+                    }} src={'./img/fewitems.png'} /> <div style={picLabelMobile}>Few items</div></div>
 
-                <div style={cell}><img id="2" onClick={this.select} alt="pooltable" key="2"
+                <div style={cell}><img id="2" onClick={this.select} alt="one" key="2"
                     style={{
                         height: '110px',
                         cursor: 'pointer',
@@ -129,14 +121,14 @@ class Size extends React.Component {
                         ':hover': {
                             transform: 'scale(1.1)'
                         }
-                    }} src={onebed} /> <div style={picLabelMobile}>One bedroom</div></div>
+                    }} src={'./img/onebedroom.png'} /> <div style={picLabelMobile}>One bedroom</div></div>
 
                 {/*DESKTOP ONLY LABLES*/}
                 <div style={picLabel}>Single item</div>
                 <div style={picLabel}>Few items</div>
                 <div style={picLabel}>One bedroom</div>
 
-                <div style={cell}><img id="3" onClick={this.select} alt="pooltable" key="3"
+                <div style={cell}><img id="3" onClick={this.select} alt="two" key="3"
                     style={{
                         height: '110px',
                         cursor: 'pointer',
@@ -145,10 +137,10 @@ class Size extends React.Component {
                             transform: 'scale(1.1)',
 
                         }
-                    }} src={twobed} /> <div style={picLabelMobile}>Two bedroom</div></div>
+                    }} src={'./img/twobedroom.png'} /> <div style={picLabelMobile}>Two bedroom</div></div>
 
 
-                <div style={cell}><img id="4" onClick={this.select} alt="pooltable" key="4"
+                <div style={cell}><img id="4" onClick={this.select} alt="three" key="4"
                     style={{
                         height: '110px',
                         cursor: 'pointer',
@@ -156,10 +148,10 @@ class Size extends React.Component {
                         ':hover': {
                             transform: 'scale(1.1)'
                         }
-                    }} src={threebed} />    <div style={picLabelMobile}>Three bedroom</div></div>
+                    }} src={'./img/threebedroom.png'} />    <div style={picLabelMobile}>Three bedroom</div></div>
 
 
-                <div style={cell}><img id="5" onClick={this.select} alt="pooltable" key="5"
+                <div style={cell}><img id="5" onClick={this.select} alt="four" key="5"
                     style={{
                         height: '110px',
                         cursor: 'pointer',
@@ -168,7 +160,7 @@ class Size extends React.Component {
                             transform: 'scale(1.1)',
 
                         }
-                    }} src={fourbed} /><div style={picLabelMobile}>Four bedroom</div></div>
+                    }} src={'./img/fourbedroom.png'} /><div style={picLabelMobile}>Four bedroom</div></div>
 
                 {/*DESKTOP ONLY LABLES*/}
                 <div style={picLabel}>Two bedroom</div>

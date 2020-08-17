@@ -1,11 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
 
-import house from '../../img/house.png'
-import piano from '../../img/piano.png'
-import pool from '../../img/pool.png'
-import labour from '../../img/labour.png'
-
 class MoveTypes extends React.Component {
     constructor(props) {
         super(props)
@@ -104,7 +99,7 @@ class MoveTypes extends React.Component {
                             transform: 'scale(1.1)'
                         }
 
-                    }} src={house} /><div style={picLabelMobile}>House</div></div>
+                    }} src={'./img/house.png'} /><div style={picLabelMobile}>House</div></div>
 
                 <div style={cell}><img id="2" onClick={this.select} alt="piano" key="2"
                     style={{
@@ -114,7 +109,7 @@ class MoveTypes extends React.Component {
                         ':hover': {
                             transform: 'scale(1.1)'
                         }
-                    }} src={piano} /><div style={picLabelMobile}>Piano</div></div>
+                    }} src={'./img/piano.png'} /><div style={picLabelMobile}>Piano</div></div>
 
 
                 <div style={cell}><img id="3" onClick={this.select} alt="pooltable" key="3"
@@ -126,7 +121,7 @@ class MoveTypes extends React.Component {
                             transform: 'scale(1.1)',
 
                         }
-                    }} src={pool} /><div style={picLabelMobile}>Pool table</div>    </div>
+                    }} src={'./img/pool.png'} /><div style={picLabelMobile}>Pool table</div>    </div>
 
                     <div style={cell}><img id="1" onClick={this.select} alt="labour" key="1"
                         style={{
@@ -136,7 +131,7 @@ class MoveTypes extends React.Component {
                             ':hover': {
                                 transform: 'scale(1.1)'
                             }
-                        }} src={labour} /><div style={picLabelMobile}>Labour only</div></div>
+                        }} src={'./img/labour.png'} /><div style={picLabelMobile}>Labour only</div></div>
 
 
 

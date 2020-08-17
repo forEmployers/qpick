@@ -2,7 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 
 import InfiniteCalendar from 'react-infinite-calendar';
-import 'react-infinite-calendar/styles.css'; // Make sure to import the default stylesheet
+//import 'react-infinite-calendar/styles.css'; // Make sure to import the default stylesheet
 import Dropdown from '../Dropdown';
 import 'react-calendar/dist/Calendar.css';
 import Swal from 'sweetalert2'
