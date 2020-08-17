@@ -15,12 +15,12 @@ pipelines:
         image: gliderlabs/alpine:3.4
         script:
           - apk add --no-cache zip
-          - zip -r quickpick.zip build
+          - zip -r build.zip build
         artifacts:
-          - quickpick.zip
+          - build.zip
     - step:
         name: Deploy
         deployment: production
-        image: atlassian/default-image:2
+        image: atlassian/default-image:latest
         script:
-          - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"quickpick.zip"
+          - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"build.zip"
