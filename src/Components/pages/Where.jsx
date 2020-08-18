@@ -5,6 +5,7 @@ import Mapd from '../Map.js';
 import Dropdown from '../Dropdown';
 import Swal from 'sweetalert2'
 import Radium from 'radium';
+const baseurl = '/wp-content/plugins/quickpick/img/'
 
 class Where extends React.Component {
     constructor(props) {
@@ -154,7 +155,7 @@ class Where extends React.Component {
         const mapDiv = {
             marginTop: '30px',
             borderRadius: '10px',
-            overflow:'auto'
+            overflow: 'auto'
         }
 
         const label = {
@@ -192,7 +193,7 @@ class Where extends React.Component {
                             {/*IF LABOURHIRE IS SELECTED, DON'T SHOW THIS*/}
                             {this.props.selectedMoveType === 1 ? <div style={label}>Address:</div> : <div style={label}>Pick up address:</div>}
 
-                            {this.props.selectedMoveType === 1 ? <></> : <div><img alt="pin" style={pinStyle} src={'./img/pina.png'} /></div>}
+                            {this.props.selectedMoveType === 1 ? <></> : <div><img alt="pin" style={pinStyle} src={baseurl + 'pina.png'} /></div>}
                             <div><AddressAutoComplete onChange={this.selectedPickupAddress} /></div>
 
                             <div> </div>
@@ -215,7 +216,7 @@ class Where extends React.Component {
                                 <div> </div>
                                 <div style={label}>Drop off address:</div>
 
-                                {this.props.selectedMoveType === 1 ? <></> : <div><img alt="pin" style={pinStyle} src={'./img/pinb.png'} /></div>}
+                                {this.props.selectedMoveType === 1 ? <></> : <div><img alt="pin" style={pinStyle} src={baseurl + 'pinb.png'} /></div>}
                                 <div><AddressAutoComplete onChange={this.selectedDropoffAddress} /></div>
 
 

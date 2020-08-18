@@ -1,5 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
+const baseurl = '/wp-content/plugins/quickpick/img/'
 
 class Size extends React.Component {
     constructor(props) {
@@ -12,26 +13,26 @@ class Size extends React.Component {
 
     }
 
-        /*
-    * This when a picture is selected
-    *
-    */
-   select = (event) => {
-    let id = parseInt(event.target.id)
-    let tempArray = []
+    /*
+* This when a picture is selected
+*
+*/
+    select = (event) => {
+        let id = parseInt(event.target.id)
+        let tempArray = []
 
-    // Create an array and set the state
-    for (let i = 0; i < this.state.selectedFilter.length; i++) {
-        if (i === id) {
-            tempArray.push('')
-            this.setState({
-                selectedFilter: tempArray
-            })
-        } else tempArray.push('invert(73%) sepia(87%) saturate(580%) hue-rotate(346deg) brightness(103%) contrast(104%)')
-        // Now let'send it back to the app so it will remember the state
-        this.props.selectedFilter(tempArray, id)
+        // Create an array and set the state
+        for (let i = 0; i < this.state.selectedFilter.length; i++) {
+            if (i === id) {
+                tempArray.push('')
+                this.setState({
+                    selectedFilter: tempArray
+                })
+            } else tempArray.push('invert(73%) sepia(87%) saturate(580%) hue-rotate(346deg) brightness(103%) contrast(104%)')
+            // Now let'send it back to the app so it will remember the state
+            this.props.selectedFilter(tempArray, id)
+        }
     }
-}
 
     render() {
 
@@ -59,7 +60,7 @@ class Size extends React.Component {
         }
 
         const picLabelMobile = {
-           display: 'none',
+            display: 'none',
             // For mobile
             '@media (max-width: 992px)': {
                 display: 'grid',
@@ -101,7 +102,7 @@ class Size extends React.Component {
                             transform: 'scale(1.1)'
                         }
 
-                    }} src={'./img/singleitem.png'} />   <div style={picLabelMobile}>Single item</div></div>
+                    }} src={baseurl + 'singleitem.png'} />   <div style={picLabelMobile}>Single item</div></div>
 
                 <div style={cell}><img id="1" onClick={this.select} alt="few" key="1"
                     style={{
@@ -111,7 +112,7 @@ class Size extends React.Component {
                         ':hover': {
                             transform: 'scale(1.1)'
                         }
-                    }} src={'./img/fewitems.png'} /> <div style={picLabelMobile}>Few items</div></div>
+                    }} src={baseurl + 'fewitems.png'} /> <div style={picLabelMobile}>Few items</div></div>
 
                 <div style={cell}><img id="2" onClick={this.select} alt="one" key="2"
                     style={{
@@ -121,7 +122,7 @@ class Size extends React.Component {
                         ':hover': {
                             transform: 'scale(1.1)'
                         }
-                    }} src={'./img/onebedroom.png'} /> <div style={picLabelMobile}>One bedroom</div></div>
+                    }} src={baseurl + 'onebedroom.png'} /> <div style={picLabelMobile}>One bedroom</div></div>
 
                 {/*DESKTOP ONLY LABLES*/}
                 <div style={picLabel}>Single item</div>
@@ -137,7 +138,7 @@ class Size extends React.Component {
                             transform: 'scale(1.1)',
 
                         }
-                    }} src={'./img/twobedroom.png'} /> <div style={picLabelMobile}>Two bedroom</div></div>
+                    }} src={baseurl + 'twobedroom.png'} /> <div style={picLabelMobile}>Two bedroom</div></div>
 
 
                 <div style={cell}><img id="4" onClick={this.select} alt="three" key="4"
@@ -148,7 +149,7 @@ class Size extends React.Component {
                         ':hover': {
                             transform: 'scale(1.1)'
                         }
-                    }} src={'./img/threebedroom.png'} />    <div style={picLabelMobile}>Three bedroom</div></div>
+                    }} src={baseurl+'threebedroom.png'} />    <div style={picLabelMobile}>Three bedroom</div></div>
 
 
                 <div style={cell}><img id="5" onClick={this.select} alt="four" key="5"
@@ -160,7 +161,7 @@ class Size extends React.Component {
                             transform: 'scale(1.1)',
 
                         }
-                    }} src={'./img/fourbedroom.png'} /><div style={picLabelMobile}>Four bedroom</div></div>
+                    }} src={baseurl + 'fourbedroom.png'} /><div style={picLabelMobile}>Four bedroom</div></div>
 
                 {/*DESKTOP ONLY LABLES*/}
                 <div style={picLabel}>Two bedroom</div>

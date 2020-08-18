@@ -1,5 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
+const baseurl = '/wp-content/plugins/quickpick/img/'
 
 class MoveTypes extends React.Component {
     constructor(props) {
@@ -99,7 +100,7 @@ class MoveTypes extends React.Component {
                             transform: 'scale(1.1)'
                         }
 
-                    }} src={'./img/house.png'} /><div style={picLabelMobile}>House</div></div>
+                    }} src={baseurl + 'house.png'} /><div style={picLabelMobile}>House</div></div>
 
                 <div style={cell}><img id="2" onClick={this.select} alt="piano" key="2"
                     style={{
@@ -109,7 +110,7 @@ class MoveTypes extends React.Component {
                         ':hover': {
                             transform: 'scale(1.1)'
                         }
-                    }} src={'./img/piano.png'} /><div style={picLabelMobile}>Piano</div></div>
+                    }} src={baseurl + 'piano.png'} /><div style={picLabelMobile}>Piano</div></div>
 
 
                 <div style={cell}><img id="3" onClick={this.select} alt="pooltable" key="3"
@@ -121,17 +122,17 @@ class MoveTypes extends React.Component {
                             transform: 'scale(1.1)',
 
                         }
-                    }} src={'./img/pool.png'} /><div style={picLabelMobile}>Pool table</div>    </div>
+                    }} src={baseurl + 'pool.png'} /><div style={picLabelMobile}>Pool table</div>    </div>
 
-                    <div style={cell}><img id="1" onClick={this.select} alt="labour" key="1"
-                        style={{
-                            height: '130px',
-                            cursor: 'pointer',
-                            filter: `${this.state.selectedFilter[1]}`,
-                            ':hover': {
-                                transform: 'scale(1.1)'
-                            }
-                        }} src={'./img/labour.png'} /><div style={picLabelMobile}>Labour only</div></div>
+                <div style={cell}><img id="1" onClick={this.select} alt="labour" key="1"
+                    style={{
+                        height: '130px',
+                        cursor: 'pointer',
+                        filter: `${this.state.selectedFilter[1]}`,
+                        ':hover': {
+                            transform: 'scale(1.1)'
+                        }
+                    }} src={baseurl + 'labour.png'} /><div style={picLabelMobile}>Labour only</div></div>
 
 
 
