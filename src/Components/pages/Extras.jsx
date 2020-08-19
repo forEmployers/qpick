@@ -1,11 +1,11 @@
 import React from 'react';
 import Radium from 'radium';
 
-import InfiniteCalendar from 'react-infinite-calendar';
-import 'react-infinite-calendar/styles.css'; // Make sure to import the default stylesheet
-//import 'react-calendar/dist/Calendar.css';
 import Dropdown from '../Dropdown';
 import Swal from 'sweetalert2'
+import DayPicker from 'react-day-picker';
+import 'react-day-picker/lib/style.css'
+
 
 class Extras extends React.Component {
     constructor(props) {
@@ -112,34 +112,14 @@ class Extras extends React.Component {
             <div style={content}>
                 <div></div>
                 <div>
-                    <InfiniteCalendar
-                        displayOptions={{
-                            showWeekdays: this.state.weekdays
-                        }}
-                        width={400}
-                        height={this.state.height}
-                        selected={this.state.time}
-                        minDate={new Date()}
-                        onSelect={date => this.timeChange(date)}
 
-                        theme={{
-                            accentColor: '#000',
-                            floatingNav: {
-                                background: 'rgba(56, 87, 138, 0.94)',
-                                chevron: '#000',
-                                color: '#FFF',
-                            },
-                            headerColor: '#FFC90E',
-                            selectionColor: '#000',
-                            textColor: {
-                                active: '#FFF',
-                                default: '#333',
-                            },
-                            todayColor: '#FFA726',
-                            weekdayColor: '#000'
-                        }}
-                    />
+                    {this.state.calendarClosed ? <div style={label}>Selected date:  {this.state.time.getDate() + '-' + (this.state.time.getMonth()+1) + '-' + (this.state.time.getYear() + 1900)}</div> :
+                        <DayPicker
+                            onDayClick={date => this.timeChange(date)}
 
+                        />
+
+                    }
                 </div>
                 <div></div>
 
