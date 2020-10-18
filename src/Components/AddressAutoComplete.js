@@ -1,7 +1,12 @@
+/**
+/ This software was developed by Attila Meszaros
+/ All rights are reserverd, unless otherwise stated
+/ 2020 - m.attila@outlook.com - hello@maxking.com.au
+*/
+
 import React from 'react';
 import Radium from 'radium';
 import Autocomplete from 'react-google-autocomplete';
-
 
 class AddressAutoComplete extends React.Component {
 
@@ -28,9 +33,6 @@ class AddressAutoComplete extends React.Component {
     }
     render() {
 
-
-
-
         const dropdown = {
             appearance: 'none',
             MozAppearance: 'none',
@@ -46,8 +48,6 @@ class AddressAutoComplete extends React.Component {
 
         return (
             <div>
-
-
                     <Autocomplete
                         style={dropdown}
                         onPlaceSelected={(place) => {
@@ -70,11 +70,6 @@ class AddressAutoComplete extends React.Component {
 
                         componentRestrictions={{ country: "AU" }}
                     />
-
-
-
-
-
             </div>
         );
     }

@@ -1,3 +1,9 @@
+/**
+/ This software was developed by Attila Meszaros
+/ All rights are reserverd, unless otherwise stated
+/ 2020 - m.attila@outlook.com - hello@maxking.com.au
+*/
+
 import React, { Component } from "react";
 import {
   withGoogleMap,
@@ -8,8 +14,6 @@ class Mapd extends Component {
   state = {
     directions: null
   };
-
-
 
   render() {
     const GoogleMapExample = withGoogleMap(props => (

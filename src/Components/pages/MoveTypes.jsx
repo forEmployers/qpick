@@ -1,3 +1,10 @@
+
+/**
+/ This software was developed by Attila Meszaros
+/ All rights are reserverd, unless otherwise stated
+/ 2020 - m.attila@outlook.com - hello@maxking.com.au
+*/
+
 import React from 'react';
 import Radium from 'radium';
 const baseurl = '/wp-content/plugins/quickpick/img/'

@@ -1,3 +1,9 @@
+/**
+/ This software was developed by Attila Meszaros
+/ All rights are reserverd, unless otherwise stated
+/ 2020 - m.attila@outlook.com - hello@maxking.com.au
+*/
+
 import React from 'react';
 import './App.scss';
 import Button from './Components/Button'
@@ -68,7 +74,7 @@ class App extends React.Component {
     this.setState({ quoteNumber }, () => console.log('qq' + quoteNumber))
   }
 
-  /*
+/*
 * scrolling
 *
 */
@@ -76,7 +82,7 @@ class App extends React.Component {
     this.el.scrollIntoView({ behavior: 'smooth' });
   }
 
-  /*
+/*
  * Booking
  *
  */
@@ -90,13 +96,11 @@ class App extends React.Component {
       return (false)
     }
 
-
     if (this.state.nameInput && validateEmail(this.state.emailInput) && this.state.phoneInput) {
 
       let url = 'https://stressfreemoves.com.au:9080/api/booking';
       let headers = new Headers();
       headers.append("Content-Type", "application/json");
-
 
       var raw = JSON.stringify({
         name: this.state.nameInput,
@@ -377,21 +381,6 @@ class App extends React.Component {
       default:
         break;
     }
-    console.log('-----------')
-
-    console.log('selected type: ' + this.state.selectedMoveType)
-    console.log('selected size: ' + this.state.selectedSize)
-    console.log('Selected pickup: ' + this.state.pickupPlaceid)
-    console.log('Selected pickup: ' + this.state.dropoffPlaceid)
-    console.log('Selected pickup access: ' + this.state.selectedPickupAccess)
-    console.log('Selected dropoff access: ' + this.state.selectedDropoffAccess)
-    console.log('Distance: ' + this.state.distance)
-    console.log('Extrs time: ' + this.state.extrasTime)
-    console.log('Selected extra: ' + this.state.selectedExtra)
-    console.log('Selected pool: ' + this.state.selectedPool)
-    console.log('Selected piano: ' + this.state.selectedPiano)
-    console.log('-----------')
-
   }
 
   /*
